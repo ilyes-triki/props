@@ -1,5 +1,6 @@
 import React from 'react'
 import "./profile.css"
+import PropTypes from 'prop-types'
 function Profile(props) {
     return (
         <div className="cardProfile">
@@ -10,6 +11,17 @@ function Profile(props) {
    </button>
         </div>
     )
+}
+Profile.defaultProps = {
+  fullName:' ilyes triki' ,
+  bio :'...' ,
+  profession :'none' , 
+}
+Profile.ProtoTypes = {
+  fullName: PropTypes.string ,
+  bio:PropTypes.string,
+  profession : PropTypes.string
+
 }
 
 export default Profile
